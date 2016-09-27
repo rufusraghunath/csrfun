@@ -1,0 +1,20 @@
+{
+  "http://localhost:4567/test": [
+    {
+      "method": "GET",
+      "params": {
+        "param-a": "foo",
+        "param-b": "bar",
+        "param-c": "baz"
+      }
+    },
+    {
+      "method": "POST",
+      "params": {
+        "param-d": "foobar",
+        "param-e": "barbaz",
+        "param-f": "duck"
+      }
+    }
+  ]
+}

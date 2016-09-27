@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<body>
+  <h1>CSRFun</h1>
+  <hr />
+  Ready to forge your request...</br></br><br/>
+  <% @config.each do |url, requests| %>
+    <% requests.each do |request| %>
+      <b><%=request['method'].upcase%>:</b></br>
+      <i><%=url%></i></br></br>
+      <form action='<%=url%>' method='<%=request["method"].upcase%>'>
+        <% request['params'].each do |param, value| %>
+          <input type='hidden' name='<%=param%>' value='<%=value%>' />
+        <% end %>
+        <input type="submit" value="FORGE!" />
+        </br></br></br>
+      </form>
+    <% end %>
+  <% end %>
+</body>
+</html>
